@@ -52,4 +52,5 @@ function notendAllTask(arr){
     alert("有任务出错" + arr.toString());
 }
 
-when.some(arrPromise,3).then(endAllTask,notendAllTask);
+when.all(arrPromise).then(endAllTask,notendAllTask);
+//when.some(arrPromise,3).then(endAllTask,notendAllTask);
