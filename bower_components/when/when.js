@@ -8,7 +8,7 @@
  */
 (function(define) { 'use strict';
 define(function (require) {
-
+     //是AMD提供了一个CMD的require方法
 	var timed = require('./lib/decorators/timed');
 	var array = require('./lib/decorators/array');
 	var flow = require('./lib/decorators/flow');
