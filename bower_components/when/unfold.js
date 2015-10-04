@@ -13,5 +13,5 @@ define(function(require) {
 	return require('./when').unfold;
 
 });
-})(typeof define === 'function' && define.amd ? define : function (factory) { module.exports = factory(require); } );
+})(typeof define === 'function' && (define.amd || define.cmd)  ? define : function (factory) { module.exports = factory(require); } );
 

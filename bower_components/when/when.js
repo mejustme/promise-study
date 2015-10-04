@@ -8,7 +8,9 @@
  */
 (function(define) { 'use strict';
 define(function (require) {
-     //是AMD提供了一个CMD的require方法
+     // requrie.js，AMD也支持sea.js ,(CMD浏览器)中function(require,exports,module){} 写法。
+	 // 但是seajsCMD不兼容AMD写法
+	 // CMD浏览器中function(require,exports,module){}，模拟node环境
 	var timed = require('./lib/decorators/timed');
 	var array = require('./lib/decorators/array');
 	var flow = require('./lib/decorators/flow');
@@ -226,5 +228,5 @@ define(function (require) {
 	return when;
 
 });
-})(typeof define === 'function' && define.amd ? define : function (factory) { module.exports = factory(require); });
+})(typeof define === 'function' && (define.amd||define.cmd) ? define : function (factory) { module.exports = factory(require); });
 //})(typeof define === 'function' && define.amd ? define : function (factory) { window.when = factory(); });

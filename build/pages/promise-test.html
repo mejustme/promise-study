@@ -15,8 +15,22 @@
       <li><h1 id="content6">test</h1></li>
   </ul>
 </body>
-<script charset="utf-8" data-main="../js/index.min" src="../../bower_components/requirejs/require.js"></script>
+<script charset="utf-8" src="../../bower_components/seajs/dist/sea.js"></script>
+<script charset="utf-8" src="../js/index.min.js"></script>
+<script>
 
+    seajs.config({
+        base: "../../bower_components",
+        alias: {
+            jquery: "jquery/dist/jquery"
+            //默认读取文件时自动末尾加.js
+            //必须是jquery,因为dist文件中定义的是这个名称
+        }
+    });
+
+  // seajs.use("../js/index.min.js");
+
+</script>
 <!--  gulp-livereload 服务器默认端口35729 -->
 <script src="//localhost:35729/livereload.js"></script>
 </html>

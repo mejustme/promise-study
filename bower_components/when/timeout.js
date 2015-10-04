@@ -22,6 +22,6 @@ define(function(require) {
 		return when(trigger).timeout(msec);
     };
 });
-})(typeof define === 'function' && define.amd ? define : function (factory) { module.exports = factory(require); });
+})(typeof define === 'function' && (define.amd || define.cmd)  ? define : function (factory) { module.exports = factory(require); });
 
 

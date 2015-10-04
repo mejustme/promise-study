@@ -1,43 +1,6 @@
-/*require.config({
-    baseUrl: "../../bower_components",
-    paths: {
-        jquery: "jquery/dist/jquery",  //默认读取文件时自动末尾加.js
-        when: "when/when"
-    }
-});
-require(['jquery','when'], function($,when) {
- 这样when中引入模块时相对于全局配置baseURL的，而不是相对于路径
-*/
-
-require.config({
-    baseUrl: "../../bower_components",
-    paths: {
-        jquery: "jquery/dist/jquery"  //默认读取文件时自动末尾加.js
-        //必须是jquery,因为dist文件中定义的是这个名称
-    }
-});
-// 这样写的时候，子模块就可以相对于当前文件路径
-//jquery/dist/jquery.js 末尾加入.js,那么会加载相对于当前文件位置
-/*发现只有jquery需要在paths中定义一下路径才能成功引用。
-如果在require函数中直接写路径会报错。
-例如：
-require([“js/jquery”], function ($) {
-})
-
- 原因是因为jq本身不是一个amd模块,它只是兼容amd的require引用方式(非加载)而已,
- 它内部兼容引入的那块代码将自己定义成了”jquery”，也就是说，如果事先jq已经加载了，
- 你其它模块要用它，只需要define(["jquery"], function ($){});就成，
- 否则，除非你的Jq文件路径为./jquery.js；这时候require拉取时的路径和模块名称相互对应，就能正常使用
- 不然是不会有正确的返回的(因为模块名称对不上)，因此，解决的方式要么事先加载好Jq,要么在paths里配置jquery
-
-*/
-
-
-require(['jquery','when/when'], function($,when) {
+seajs.use(['../../bower_components/jquery/dist/jquery','../../bower_components/when/when'], function($,when) {
     // jQuery。否则引入的dist/jquery文件貌似不符合AMD规范,只是适配AMD,必须要paths方式引入，$为undefiend
     // 或者引入 模块化一个个src/jquery定义的JQuery文件,这样完全符合AMD规范
-    console.log($)
-    console.log(when)
     var arr = [1,2,3,4,5,6];
     var deferred = when.defer();
     function run(deferred){

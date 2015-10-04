@@ -1,4 +1,4 @@
-!function(e){"object"==typeof exports?module.exports=e():"function"==typeof define&&define.amd?define(e):"undefined"!=typeof window?window.Promise=e():"undefined"!=typeof global?global.Promise=e():"undefined"!=typeof self&&(self.Promise=e())}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+!function(e){"object"==typeof exports?module.exports=e():"function"==typeof define&&(define.amd || define.cmd) ?define(e):"undefined"!=typeof window?window.Promise=e():"undefined"!=typeof global?global.Promise=e():"undefined"!=typeof self&&(self.Promise=e())}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /** @license MIT License (c) copyright 2010-2014 original author or authors */
 /** @author Brian Cavalier */
 /** @author John Hann */
@@ -30,7 +30,7 @@ define(function (require) {
 	});
 
 });
-})(typeof define === 'function' && define.amd ? define : function (factory) { module.exports = factory(require); });
+})(typeof define === 'function' &&(define.amd || define.cmd) ? define : function (factory) { module.exports = factory(require); });
 
 },{"./Scheduler":3,"./env":5,"./makePromise":7}],3:[function(require,module,exports){
 /** @license MIT License (c) copyright 2010-2014 original author or authors */
@@ -112,7 +112,7 @@ define(function() {
 	return Scheduler;
 
 });
-}(typeof define === 'function' && define.amd ? define : function(factory) { module.exports = factory(); }));
+}(typeof define === 'function' && (define.amd || define.cmd)  ? define : function(factory) { module.exports = factory(); }));
 
 },{}],4:[function(require,module,exports){
 /** @license MIT License (c) copyright 2010-2014 original author or authors */
@@ -200,7 +200,7 @@ define(function(require) {
 	function noop() {}
 
 });
-}(typeof define === 'function' && define.amd ? define : function(factory) { module.exports = factory(require); }));
+}(typeof define === 'function' && (define.amd || define.cmd)  ? define : function(factory) { module.exports = factory(require); }));
 
 },{"../env":5,"../format":6}],5:[function(require,module,exports){
 /** @license MIT License (c) copyright 2010-2014 original author or authors */
@@ -275,7 +275,7 @@ define(function(require) {
 		};
 	}
 });
-}(typeof define === 'function' && define.amd ? define : function(factory) { module.exports = factory(require); }));
+}(typeof define === 'function' && (define.amd || define.cmd) ? define : function(factory) { module.exports = factory(require); }));
 
 },{}],6:[function(require,module,exports){
 /** @license MIT License (c) copyright 2010-2014 original author or authors */
@@ -333,7 +333,7 @@ define(function() {
 	}
 
 });
-}(typeof define === 'function' && define.amd ? define : function(factory) { module.exports = factory(); }));
+}(typeof define === 'function' && (define.amd || define.cmd) ? define : function(factory) { module.exports = factory(); }));
 
 },{}],7:[function(require,module,exports){
 /** @license MIT License (c) copyright 2010-2014 original author or authors */
@@ -1262,7 +1262,7 @@ define(function() {
 		return Promise;
 	};
 });
-}(typeof define === 'function' && define.amd ? define : function(factory) { module.exports = factory(); }));
+}(typeof define === 'function' && (define.amd || define.cmd)  ? define : function(factory) { module.exports = factory(); }));
 
 },{}]},{},[1])
 (1)

@@ -25,4 +25,4 @@ define(function() {
 		return typeof src === 'function' ? src.bind() : Object.create(src);
 	}
 });
-}(typeof define === 'function' && define.amd ? define : function(factory) { module.exports = factory(); }));
+}(typeof define === 'function' && (define.amd || define.cmd) ? define : function(factory) { module.exports = factory(); }));
